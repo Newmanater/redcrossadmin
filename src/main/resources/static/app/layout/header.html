@@ -1,0 +1,55 @@
+<div class="container">
+	<div id="casperLogo" class="col-sm-1 center-block hidden-sm hidden-xs">
+		<img src="images/casper_logo_100.png">
+	</div>
+	<div id="headerTitle" class="col-sm-10 text-center hidden-xs">
+		<h2 ng-bind="::'APP_TITLE' | translate"></h2>
+	</div>
+	<div id="hpeLogo" class="col-sm-1 center-block hidden-sm hidden-xs">
+		<img src="images/hpe_logo_menu.png">
+	</div>
+</div>
+<nav class="navbar navbar-default navbar-static">
+	<div class="container">
+		<div class="col-sm-1">&nbsp;</div>
+		<div class="col-sm-11">
+			<div class="navbar-header">
+				<button aria-controls="navbar" aria-expanded="false"
+					data-target="#navbar" data-toggle="collapse"
+					class="navbar-toggle collapsed" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span>
+				</button>
+				<div class="navbar-brand visible-xs"
+					ng-bind="::'APP_PAGE_TITLE' | translate"></div>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li id="home" ng-class="headerCtl.isActive('home')"><a
+						ui-sref="home"><h4>
+								<b ng-bind="::'MENU_HOME' | translate"></b>
+							</h4></a></li>
+					<li id="deals" ng-class="headerCtl.isActive('deal')"><a
+						ui-sref="deal-list"><h4>
+								<b ng-bind="::'MENU_DEAL' | translate"></b>
+							</h4></a></li>
+					<li id="users" ng-class="headerCtl.isActive('user')"
+						ng-show="headerCtl.isVisible()"><a ui-sref="user-list"><h4>
+								<b ng-bind="::'MENU_USER' | translate"></b>
+							</h4></a></li>
+					<li id="help" ng-class="headerCtl.isActive('help')"><a><h4>
+								<b ng-bind="::'MENU_HELP' | translate"></b>
+							</h4></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><span class="navbar-text" tooltip-placement="bottom"
+						uib-tooltip-html="'{{::'APP_USER_SUMMARY' | translate:headerCtl.userData}}'">
+							<span id="email" class="glyphicon glyphicon-user" html="true"
+							tooltip-placement="bottom"> </span> <span
+							ng-bind="::headerCtl.userData.appUser"></span>
+					</span>
+					<li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>

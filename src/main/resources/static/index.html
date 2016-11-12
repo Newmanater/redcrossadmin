@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="app" ng-cloak>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <title ng-bind="::'APP_PAGE_TITLE' | translate"></title>
+        <!-- build:css css/custom-web.css -->
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="lib/toastr/toastr.min.css"> 
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <div ui-view="header"> </div>
+        <div class="container">
+            <div ui-view> </div>
+        </div>
+        <div ui-view="footer"> </div>
+        
+        <!--  JS library files managed by bower -->
+        <!-- build:jsLib js/custom-lib.js -->
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="lib/angular-route/angular-route.min.js"></script>
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    	<script src="lib/angular-ui-mask/dist/mask.min.js"></script>
+        <script src="lib/angular-translate/angular-translate.min.js"></script>
+        <script src="lib/toastr/toastr.min.js"></script>
+        <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="lib/moment/min/moment.min.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js js/custom-web.js -->
+        <!-- core application -->
+        <script src="app/app.module.js"></script>
+        <script src="app/app.service.js"></script>
+        <script src="app/app.filter.js"></script>
+        <script src="app/app.templates.js"></script>
+        
+        <!-- layout -->
+        <script src="app/layout/layout.module.js"></script>
+        <script src="app/layout/header.controller.js"></script>
+        <script src="app/layout/footer.controller.js"></script>
+        
+        <!-- components -->
+        <script src="app/components/components.module.js"></script>
+        <script src="app/components/translate.config.js"></script>
+        <script src="app/components/cc-year-month-selector.directive.js"></script>
+        <script src="app/components/toastr.service.js"></script>
+        <script src="app/components/baseData.service.js"></script>
+        <script src="app/components/numeric-input.directive.js"></script>
+        <script src="app/components/drag.directive.js"></script> 
+        <script src="app/components/drop.directive.js"></script>  
+     
+        
+        <!-- home -->
+        <script src="app/home/home.module.js"></script>
+        <script src="app/home/home.route.js"></script>
+        <script src="app/home/home.controller.js"></script>
+        
+        <!-- deals -->
+        <script src="app/deals/deal.module.js"></script>
+        <script src="app/deals/deal.controller.js"></script>
+        <script src="app/deals/deal.route.js"></script>
+        <script src="app/deals/deal.service.js"></script>     
+        
+        <!-- users -->
+        <script src="app/users/user.module.js"></script>
+        <script src="app/users/user.controller.js"></script>
+         <script src="app/users/user-email.directive.js"></script>
+        <script src="app/users/user.route.js"></script>
+        <script src="app/users/user.service.js"></script>
+        
+         <!-- csv download -->
+        <script src="app/csv/csv.module.js"></script>
+        <script src="app/csv/csv.service.js"></script>
+        
+        <!-- security -->
+        <script src="app/security/security.module.js"></script>
+        <script src="app/security/security.service.js"></script>
+        
+        <!-- proposals -->
+        <script src="app/proposals/proposal.module.js"></script>
+        <script src="app/proposals/proposal.controller.js"></script>
+        <script src="app/proposals/proposal.routes.js"></script>
+        <script src="app/proposals/proposal.service.js"></script>
+        
+        <!-- workspace -->
+        <script src="app/workspace/workspace.module.js"></script>
+        <script src="app/workspace/workspace.routes.js"></script>
+        <script src="app/workspace/workspace.controler.js"></script>
+
+        <!-- workspace header -->
+        <script src="app/workspace-header/workspace.header.module.js"></script>
+        <script src="app/workspace-header/workspace.header.routes.js"></script>
+        <script src="app/workspace-header/workspace.header.controler.js"></script>
+        <script src="app/workspace-header/workspace.header.service.js"></script>
+        
+        <!-- workspace infrastructure-->
+        <script src="app/workspace-infrastructure/workspace.infrastructure.module.js"></script>
+        <script src="app/workspace-infrastructure/workspace.infrastructure.routes.js"></script>
+        <script src="app/workspace-infrastructure/workspace.infrastructure.controler.js"></script>
+        
+        <script src="app/workspace-infrastructure/site/site.controler.js"></script>
+        <script src="app/workspace-infrastructure/site/site.service.js"></script>
+        <script src="app/workspace-infrastructure/environment/environment.controler.js"></script>
+        <script src="app/workspace-infrastructure/environment/environment.service.js"></script>
+                     
+        <script src="app/workspace-infrastructure/ili/ili-list/ililist.controler.js"></script>
+        <script src="app/workspace-infrastructure/ili/ili-new/ilinew.controler.js"></script>
+        <script src="app/workspace-infrastructure/ili/ili-edit/iliedit.controler.js"></script>
+        <script src="app/workspace-infrastructure/ili/ilifilter.filter.js"></script>
+        <script src="app/workspace-infrastructure/ili/ili.service.js"></script>
+             
+        <script src="app/workspace-infrastructure/warranty-air/warranty.air.controler.js"></script>
+     
+        <!-- workspace service-->
+        <script src="app/workspace-services/workspace.services.module.js"></script>
+        <script src="app/workspace-services/workspace.services.routes.js"></script>
+        <script src="app/workspace-services/workspace.services.controler.js"></script>  
+        <script src="app/workspace-services/workspace.services.service.js"></script> 
+         
+        <script src="app/workspace-services/hardwarereactive/service-hardware.controller.js"></script>
+        <script src="app/workspace-services/hardwarereactive/service-hardware.service.js"></script>
+        <script src="app/workspace-services/hardwarereactive/service-hardware-times.controler.js"></script>
+
+        <script src="app/workspace-services/resource/service-resource.controler.js"></script>
+        <script src="app/workspace-services/resource/service-resource.service.js"></script>
+
+        <script src="app/workspace-services/service-other/service-other.controler.js"></script>
+        <script src="app/workspace-services/service-other/service-other.service.js"></script>
+        
+        <script src="app/workspace-services/attachments/service.attachments.add.controler.js"></script>
+        <script src="app/workspace-services/attachments/service.attachments.view.controler.js"></script>
+       
+        <!-- workspace pricing-->
+        <script src="app/workspace-pricing/workspace.pricing.module.js"></script>
+        <script src="app/workspace-pricing/workspace.pricing.routes.js"></script>
+        <script src="app/workspace-pricing/workspace.pricing.controler.js"></script>
+        
+        <script src="app/workspace-pricing/workspace.pricing-calc.controler.js"></script>
+        <script src="app/workspace-pricing/workspace.pricing-calc.service.js"></script>  
+       
+        <!-- workspace outputs-->
+        <script src="app/workspace-outputs/workspace.outputs.module.js"></script>
+        <script src="app/workspace-outputs/workspace.outputs.routes.js"></script>
+        <script src="app/workspace-outputs/workspace.outputs.controler.js"></script>  
+        
+        <!-- dealwidget -->
+        <script src="app/dealwidget/deal-widget.module.js"></script>
+        <script src="app/dealwidget/deal-widget.directive.js"></script>
+        
+        <!-- proposalwidget -->
+        <script src="app/proposalwidget/proposal-widget.module.js"></script>
+        <script src="app/proposalwidget/proposal-widget.directive.js"></script>
+        <!-- endbuild -->
+             
+    </body>  
+</html>
